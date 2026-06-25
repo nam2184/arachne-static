@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 38% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 38% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 186 92% 58%;
+    --primary-foreground: 224 71% 4%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 68%;
+    --accent: 260 85% 68%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 28% 18%;
+    --input: 215 28% 18%;
+    --ring: 186 92% 58%;
+    --radius: 0.9rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-color: #000;
+    background-size: 18px 18px;
+  }
+
+  body::before {
+    background:
+      radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.1), transparent 8rem),
+      radial-gradient(circle at 82% 28%, rgba(255, 255, 255, 0.08), transparent 10rem),
+      radial-gradient(circle at 54% 86%, rgba(255, 255, 255, 0.08), transparent 11rem);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: -20;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.28);
+  }
+
+  main > header,
+  main > section,
+  main > footer {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@layer components {
+  .terminal-window,
+  canvas {
+    image-rendering: pixelated;
+  }
+
+  .feature-copy {
+    will-change: opacity, transform, filter;
+  }
+}
