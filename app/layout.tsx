@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: "Arachne - Linked Project Context for Coding Agents",
   description:
     "Arachne links coding sessions on a canvas so agents can read peer project context through tool calls and follow existing patterns.",
+  icons: {
+    icon: "/node-web.svg",
+    shortcut: "/node-web.svg",
+    apple: "/node-web.svg",
+  },
   keywords: [
     "Arachne",
     "AI coding agent",

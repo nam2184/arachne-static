@@ -91,7 +91,9 @@ export default function Home() {
       <BackgroundWeb />
       <header className="container flex items-center justify-between py-6">
         <a href="#top" className="flex items-center gap-3" aria-label="Arachne home">
-          <span className="flex h-10 w-10 items-center justify-center border-2 border-white"><Blocks className="h-5 w-5" /></span>
+          <span className="flex h-14 w-14 items-center justify-center overflow-hidden border-2 border-white bg-black p-1.5">
+            <img src="/node-web.svg" alt="" className="h-full w-full object-contain" />
+          </span>
           <span className="font-mono text-sm font-semibold uppercase tracking-[0.28em]">arachne</span>
         </a>
         <Button asChild variant="outline" size="sm" className="hidden rounded-none border-2 border-white bg-black font-mono text-white hover:bg-white hover:text-black sm:inline-flex">
