@@ -246,7 +246,6 @@ export default function Home() {
 
       <footer className="border-t-2 border-white py-8">
         <div className="container flex flex-col justify-between gap-4 font-mono text-xs uppercase tracking-[0.1em] text-white/60 sm:flex-row sm:items-center">
-          <div>monochrome terminal landing page for arachne</div>
           <a href={githubUrl} target="_blank" rel="noreferrer" className="text-white hover:underline">
             github.com/nam2184/arachne
           </a>
